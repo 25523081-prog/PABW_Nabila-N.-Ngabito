@@ -1,14 +1,34 @@
 <!DOCTYPE html>
+<!--
+  KERANGKA AWAL — Halaman Profil Saya
+  PABW 2026/2027 · Pertemuan 3
+
+  Cara pakai:
+  1. Salin berkas ini, ganti nama menjadi profil.html
+  2. Ganti setiap tulisan TODO dengan isi milik Anda SENDIRI
+  3. Simpan, lalu buka di peramban (F5 untuk memuat ulang)
+  4. Kerjakan berurutan mengikuti Lembar B, C, D, dan E pada worksheet
+
+  Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
+  komentar itu adalah daftar periksa Anda sendiri.
+-->
 <html lang="id">
 <head>
-  <meta charset="utf-8">
+   <title>Resep & Menu Masakan</title>
+  <!-- TODO B.1: tambahkan dua baris meta di bawah ini:
+       <meta charset="...">
+       <meta name="viewport" content="...">  -->
+   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resep &amp; Menu Masakan Nabila</title>
 </head>
 <body>
 
+    <!-- TODO C.1: buat <header> di sini.
+       Isinya: satu <h1> berisi judul halaman Anda.
+       Di dalamnya juga ada <nav> berisi 3 tautan ke bagian halaman. -->
+
   <header>
-    <h1>Resep &amp; Menu Masakan Nabila</h1>
+    <h1>Resep & Menu Masakan</h1>
     <nav aria-label="Navigasi utama">
       <ul>
         <li><a href="#daftar-resep">Daftar Resep</a></li>
@@ -17,6 +37,9 @@
       </ul>
     </nav>
   </header>
+
+    <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
+       Di dalamnya ada 2 <section>, masing-masing punya <h2> sendiri. -->
 
   <main>
     <section id="daftar-resep">
@@ -29,7 +52,6 @@
             <th scope="col">Nama Masakan</th>
             <th scope="col">Bahan Utama</th>
             <th scope="col">Bahan / Bumbu Pelengkap</th>
-            <th scope="col">Tingkat Kesulitan</th>
           </tr>
         </thead>
         <tbody>
@@ -37,19 +59,16 @@
             <th scope="row">Nasi Goreng Spesial</th>
             <td>Nasi, Telur</td>
             <td>Bawang merah, cabai, kecap manis, kerupuk</td>
-            <td>Mudah</td>
           </tr>
           <tr>
             <th scope="row">Ayam Kecap Mentega</th>
             <td>Daging Ayam</td>
             <td>Mentega, bawang bombay, kecap inggris, jeruk nipis</td>
-            <td>Sedang</td>
           </tr>
           <tr>
             <th scope="row">Soto Ayam Santan</th>
             <td>Daging Ayam, Santan</td>
             <td>Daun jeruk, serai, soun, daun bawang, bawang goreng</td>
-            <td>Sulit</td>
           </tr>
         </tbody>
       </table>
@@ -65,7 +84,7 @@
       <ul>
         <li>Bahan Utama: Nasi, Daging Ayam, Telur, Santan</li>
         <li>Bumbu Dapur: Bawang Merah, Bawang Putih, Bawang Bombay, Cabai</li>
-        <li>Rempah &amp; Pelengkap: Daun Jeruk, Serai, Mentega, Kecap Manis, Kecap Inggris</li>
+        <li>Rempah & Pelengkap: Daun Jeruk, Serai, Mentega, Kecap Manis, Kecap Inggris</li>
       </ul>
     </section>
 
@@ -85,17 +104,16 @@
           <label for="bumbu-pelengkap">Bahan / Bumbu Pelengkap:</label>
           <input type="text" id="bumbu-pelengkap" name="bumbu-pelengkap">
         </p>
-        <p>
-          <label for="tingkat-kesulitan">Tingkat Kesulitan:</label>
-          <input type="text" id="tingkat-kesulitan" name="tingkat-kesulitan" placeholder="Mudah / Sedang / Sulit" required>
-        </p>
         <button type="submit">Simpan</button>
       </form>
     </section>
   </main>
 
+   <!-- TODO C.3: buat <footer> di sini.
+       Isinya: nama Anda, NIM Anda, dan tahun. -->
+
   <footer>
-    <p>Nabila N. Ngabito · 25523081 · 2026</p>
+    <p>Nabila N. Ngabito, 25523081, 2026 </p>
   </footer>
 
 </body>
