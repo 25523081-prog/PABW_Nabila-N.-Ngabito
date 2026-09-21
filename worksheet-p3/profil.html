@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resep &amp; Menu Masakan Nabila</title>
+</head>
+<body>
+
+  <header>
+    <h1>Resep &amp; Menu Masakan Nabila</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-resep">Daftar Resep</a></li>
+        <li><a href="#daftar-bahan">Daftar Bahan</a></li>
+        <li><a href="#tambah-resep">Tambah Resep</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="daftar-resep">
+      <h2>Daftar Masakan Favorit</h2>
+      
+      <table>
+        <caption>Koleksi Menu Masakan Rumahan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nama Masakan</th>
+            <th scope="col">Bahan Utama</th>
+            <th scope="col">Bahan / Bumbu Pelengkap</th>
+            <th scope="col">Tingkat Kesulitan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Nasi Goreng Spesial</th>
+            <td>Nasi, Telur</td>
+            <td>Bawang merah, cabai, kecap manis, kerupuk</td>
+            <td>Mudah</td>
+          </tr>
+          <tr>
+            <th scope="row">Ayam Kecap Mentega</th>
+            <td>Daging Ayam</td>
+            <td>Mentega, bawang bombay, kecap inggris, jeruk nipis</td>
+            <td>Sedang</td>
+          </tr>
+          <tr>
+            <th scope="row">Soto Ayam Santan</th>
+            <td>Daging Ayam, Santan</td>
+            <td>Daun jeruk, serai, soun, daun bawang, bawang goreng</td>
+            <td>Sulit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <img src="nasi-goreng.webp" alt="Sepiring nasi goreng spesial dengan telur mata sapi di atasnya" width="640" height="360" loading="lazy">
+        <figcaption>Nasi goreng spesial buatan sendiri untuk sarapan.</figcaption>
+      </figure>
+    </section>
+
+    <section id="daftar-bahan">
+      <h2>Bahan yang Biasa Dipakai</h2>
+      <ul>
+        <li>Bahan Utama: Nasi, Daging Ayam, Telur, Santan</li>
+        <li>Bumbu Dapur: Bawang Merah, Bawang Putih, Bawang Bombay, Cabai</li>
+        <li>Rempah &amp; Pelengkap: Daun Jeruk, Serai, Mentega, Kecap Manis, Kecap Inggris</li>
+      </ul>
+    </section>
+
+    <section id="tambah-resep">
+      <h2>Form Tambah Resep</h2>
+      
+      <form action="/simpan" method="post">
+        <p>
+          <label for="nama-masakan">Nama Masakan:</label>
+          <input type="text" id="nama-masakan" name="nama-masakan" required>
+        </p>
+        <p>
+          <label for="bahan-utama">Bahan Utama:</label>
+          <input type="text" id="bahan-utama" name="bahan-utama" required>
+        </p>
+        <p>
+          <label for="bumbu-pelengkap">Bahan / Bumbu Pelengkap:</label>
+          <input type="text" id="bumbu-pelengkap" name="bumbu-pelengkap">
+        </p>
+        <p>
+          <label for="tingkat-kesulitan">Tingkat Kesulitan:</label>
+          <input type="text" id="tingkat-kesulitan" name="tingkat-kesulitan" placeholder="Mudah / Sedang / Sulit" required>
+        </p>
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Nabila N. Ngabito · 25523081 · 2026</p>
+  </footer>
+
+</body>
+</html>
