@@ -8,3 +8,11 @@ Tiga bagian utama: Daftar Masakan Favorit, Bahan yang biasa dipakai, Form tambah
 Kolom tabel: Nama Menu, Bahan Utama, Bumbu Pelengkap
 Kolom form: Nama Menu, Bahan Utama, Bumbu Pelengkap
 Gambar: nasi-goreng.webp
+
+## Catatan penggunaan AI
+Dalam pengerjaan worksheet ini saya menggunakan Gemini AI: 
+1. Memeriksa dan memvalidasi kebenaran kode HTML yang dibuat.
+2. Membantu panduan langkah-langkah pengujian pada Lembar F (Lighthouse, uji manual, dan refleksi).
+
+penulisan kode dan pelaksanaan pengujian dilakukan sendiri
+
