@@ -2,104 +2,116 @@
 <!--
   KERANGKA AWAL — Halaman Profil Saya
   PABW 2026/2027 · Pertemuan 3
-
-  Cara pakai:
-  1. Salin berkas ini, ganti nama menjadi profil.html
-  2. Ganti setiap tulisan TODO dengan isi milik Anda SENDIRI
-  3. Simpan, lalu buka di peramban (F5 untuk memuat ulang)
-  4. Kerjakan berurutan mengikuti Lembar B, C, D, dan E pada worksheet
-
-  Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
-  komentar itu adalah daftar periksa Anda sendiri.
 -->
 <html lang="id">
 <head>
-  <!-- TODO B.1: tambahkan dua baris meta di bawah ini:
+
+      <!-- TODO B.1: tambahkan dua baris meta di bawah ini:
        <meta charset="...">
        <meta name="viewport" content="...">  -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Resep & Menu Masakan</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resep &amp; Menu Masakan Khas Gorontalo</title>
 </head>
 <body>
 
-  <!-- TODO C.1: buat <header> di sini.
+     <!-- TODO C.1: buat <header> di sini.
        Isinya: satu <h1> berisi judul halaman Anda.
        Di dalamnya juga ada <nav> berisi 3 tautan ke bagian halaman. -->
 
-        <header>
-            <h1>Resep & Menu Masakan</h1>
-            <nav aria-label="Navigasi utama">
-                <ul>
-                    <li><a href="#Daftar-Resep">Daftar Resep</a></li>
-                    <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
-                    <li><a href="#Tambah-Resep">Tambah Resep</a></li>
-                </ul>
-            </nav>
-        </header>
 
-  <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
+  <header>
+    <h1>Resep &amp; Menu Masakan Khas Gorontalo</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-resep">Daftar Resep</a></li>
+        <li><a href="#daftar-bahan">Daftar Bahan</a></li>
+        <li><a href="#Tambah-Resep">Tambah Resep</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
        Di dalamnya ada 2 <section>, masing-masing punya <h2> sendiri. -->
-        
-  <main>
+
+  <main> 
+    
     <!-- TODO D.1: di dalam section pertama, buat tabel data Anda.
          Wajib ada: <caption>, <thead>, <th scope="col">, dan minimal 3 baris data. -->
 
-             <section id="daftar-resep">
+    <section id="daftar-resep">
       <h2>Daftar Masakan Favorit</h2>
-      <!-- tabel Anda nanti di sini (Lembar D) -->
-       <table>
-  <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
-  <thead>
-    <tr>
-      <th scope="col">Nama Masakan</th>
-      <th scope="col">Bahan Utama</th>
-      <th scope="col">Bumbu Pelengkap</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Binte Biluhuta</th>
-      <td>Jagung, ikan atau udang, kelapa</td>
-      <td>Cabai, bawang merah, bawang putih, jeruk nipis, garam</td>
-    </tr>
-    <tr>
-      <th scope="row">Ayam Iloni</th>
-      <td>Ayam, santan</td>
-      <td>Cabai, bawang merah, bawang putih, kunyit, jahe, lengkuas</td>
-    </tr>
-    <tr>
-      <th scope="row">Bilenthango</th>
-      <td>Ikan mujair atau nila</td>
-      <td>Cabai, bawang merah, bawang putih, kunyit, jahe, tomat, garam</td>
-    </tr>
-    <tr>
-      <th scope="row">Sambal Sagela</th>
-      <td>Ikan sagela asap</td>
-      <td>Cabai, bawang merah, tomat, jeruk nipis, garam</td>
-    </tr>
-    <tr>
-      <th scope="row">Milu Siram</th>
-      <td>Jagung, ikan</td>
-      <td>Cabai, bawang merah, tomat, kemangi, jeruk nipis, garam</td>
-    </tr>
-  </tbody>
-</table>
-       </table>
+      
+      <table>
+        <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nama Masakan</th>
+            <th scope="col">Bahan Utama</th>
+            <th scope="col">Bumbu Pelengkap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Binthe Biluhuta</th>
+            <td>Jagung, ikan atau udang, kelapa</td>
+            <td>Cabai, bawang merah, bawang putih, jeruk nipis, garam</td>
+          </tr>
+          <tr>
+            <th scope="row">Ayam Iloni</th>
+            <td>Ayam, santan</td>
+            <td>Cabai, bawang merah, bawang putih, kunyit, jahe, lengkuas</td>
+          </tr>
+          <tr>
+            <th scope="row">Bilenthango</th>
+            <td>Ikan mujair atau nila</td>
+            <td>Cabai, bawang merah, bawang putih, kunyit, jahe, tomat, garam</td>
+          </tr>
+          <tr>
+            <th scope="row">Sambal Sagela</th>
+            <td>Ikan sagela asap</td>
+            <td>Cabai, bawang merah, tomat, jeruk nipis, garam</td>
+          </tr>
+        </tbody>
+      </table>
+   
+  <figure>
+  <img src="binthe.jpg"
+       alt="mangkuk berisi sup jagung khas Gorontalo"
+       width="640" 
+       height="360" 
+       loading="lazy">
+  <figcaption>Binthe Biluhuta</figcaption>
+</figure>
     </section>
 
-    <!-- TODO E.1: di dalam section kedua, buat form Anda.
+        <!-- TODO E.1: di dalam section kedua, buat form Anda.
          Wajib ada: minimal 3 kolom, setiap kolom punya <label for> yang
          cocok dengan id input-nya, dan satu atribut validasi. -->
 
-          <section id="bagian-2">
-      <h2>Judul bagian kedua</h2>
-      <!-- form Anda nanti di sini (Lembar E) -->
+    <section id="Tambah-Resep">
+      <h2>Form Tambah Resep</h2>
+      <!-- Nanti tambahkan <form> di sini -->
+        <form action="/simpan" method="post">
+            <p>
+            <label for="Nama-Menu">Nama Menu</label>
+            <input type="text" id="Nama-Menu" name="nama_menu" required>
+            <label for="Bahan-Utama">Bahan Utama</label>
+            <input type="text" id="Bahan-Utama" name="bahan_utama" required>
+            <label for="Bumbu-Pelengkap">Bumbu Pelengkap</label>
+            <input type="text" id="Bumbu-Pelengkap" name="bumbu_pelengkap" required>
+            </p>
+           
+        </form>
     </section>
   </main>
 
-  <!-- TODO C.3: buat <footer> di sini.
-       Isinya: nama Anda, NIM Anda, dan tahun. -->
+
+  <!-- TODO C.3: buat <footer> di sini -->
+  <footer>
+    <p>Nabila N. Ngabito · 25523081 · 2026</p>
+  </footer>
 
 </body>
 </html>
