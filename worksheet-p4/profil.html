@@ -6,10 +6,7 @@
 <html lang="id">
 <head>
 
-      <!-- TODO B.1: tambahkan dua baris meta di bawah ini:
-       <meta charset="...">
-       <meta name="viewport" content="...">  -->
-
+  <!-- TODO B.1: dua baris meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resep & Menu Masakan Khas Gorontalo</title>
@@ -22,30 +19,24 @@
 </head>
 <body>
 
-     <!-- TODO C.1: buat <header> di sini.
-       Isinya: satu <h1> berisi judul halaman Anda.
-       Di dalamnya juga ada <nav> berisi 3 tautan ke bagian halaman. -->
-
-
+  <!-- TODO C.1: header -->
   <header>
-    <h1>Resep & Menu Masakan Khas Gorontalo</h1>
-    <nav aria-label="Navigasi utama">
-      <ul>
-        <li><a href="#Daftar-Resep">Daftar Resep</a></li>
-        <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
-        <li><a href="#Tambah-Resep">Tambah Resep</a></li>
-      </ul>
-    </nav>
+    <div class="header-baris">
+      <h1>Resep & Menu Masakan Khas Gorontalo</h1>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#Daftar-Resep">Daftar Resep</a></li>
+          <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
+          <li><a href="#Tambah-Resep">Tambah Resep</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-    <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
-       Di dalamnya ada 2 <section>, masing-masing punya <h2> sendiri. -->
-
+  <!-- TODO C.2: main -->
   <main> 
     
-    <!-- TODO D.1: di dalam section pertama, buat tabel data Anda.
-         Wajib ada: <caption>, <thead>, <th scope="col">, dan minimal 3 baris data. -->
-
+    <!-- TODO D.1: section pertama -->
     <section id="Daftar-Resep">
       <h2>Daftar Masakan Favorit</h2>
       
@@ -82,54 +73,55 @@
         </tbody>
       </table>
    
-  <figure>
-  <img src="binthe.jpg"
-       alt="Mangkuk berisi sup jagung Binte Biluhuta khas Gorontalo dengan taburan ikan dan daun kemangi"
-       width="640" 
-       height="360" 
-       loading="lazy">
-  <figcaption>Binthe Biluhuta</figcaption>
-</figure>
-<figure>
-  <img src="ayam-iloni.jpg" 
-       alt="Ayam Iloni khas Gorontalo yang dibakar dengan rempah dan santan" 
-       width="640" 
-       height="360" 
-       loading="lazy">
-  <figcaption>Ayam Iloni Khas Gorontalo</figcaption>
-</figure>
-</figure>
+      <!-- Katalog Foto (diganti ke class="katalog") -->
+      <div class="katalog">
+        <figure class="kartu">
+          <img src="binthe.jpg"
+               alt="Mangkuk berisi sup jagung Binte Biluhuta khas Gorontalo dengan taburan ikan dan daun kemangi"
+               width="640" 
+               height="360" 
+               loading="lazy">
+          <figcaption>Binthe Biluhuta</figcaption>
+        </figure>
+
+        <figure class="kartu">
+          <img src="ayam-iloni.jpg" 
+               alt="Ayam Iloni khas Gorontalo yang dibakar dengan rempah dan santan" 
+               width="640" 
+               height="360" 
+               loading="lazy">
+          <figcaption>Ayam Iloni Khas Gorontalo</figcaption>
+        </figure>
+      </div>
     </section>
 
-        <!-- TODO E.1: di dalam section kedua, buat form Anda.
-         Wajib ada: minimal 3 kolom, setiap kolom punya <label for> yang
-         cocok dengan id input-nya, dan satu atribut validasi. -->
-
+    <!-- TODO E.1: section kedua -->
     <section id="Tambah-Resep">
       <h2>Form Tambah Resep</h2>
-      <!-- Nanti tambahkan <form> di sini -->
-        <form action="/simpan" method="post">
-            <p>
-            <label for="Nama-Menu">Nama Menu</label>
-            <input type="text" id="Nama-Menu" name="nama_menu" required>
-            </p>
+      <form action="/simpan" method="post">
+        
+        <!-- Form dibungkus dengan div.form-kolom -->
+        <div class="form-kolom">
+          <label for="Nama-Menu">Nama Menu</label>
+          <input type="text" id="Nama-Menu" name="nama_menu" required>
+        </div>
 
-            <p>
-            <label for="Bahan-Utama">Bahan Utama</label>
-            <input type="text" id="Bahan-Utama" name="bahan_utama" required>
-            </p>
+        <div class="form-kolom">
+          <label for="Bahan-Utama">Bahan Utama</label>
+          <input type="text" id="Bahan-Utama" name="bahan_utama" required>
+        </div>
 
-            <p>
-            <label for="Bumbu-Pelengkap">Bumbu Pelengkap</label>
-            <input type="text" id="Bumbu-Pelengkap" name="bumbu_pelengkap" required>
-            </p>
-            <button type="submit">Simpan</button>           
-        </form>
+        <div class="form-kolom">
+          <label for="Bumbu-Pelengkap">Bumbu Pelengkap</label>
+          <input type="text" id="Bumbu-Pelengkap" name="bumbu_pelengkap" required>
+        </div>
+
+        <button type="submit">Simpan</button>           
+      </form>
     </section>
   </main>
 
-
-  <!-- TODO C.3: buat <footer> di sini -->
+  <!-- TODO C.3: footer -->
   <footer>
     <p>Nabila N. Ngabito, 25523081, 2026</p>
   </footer>
