@@ -16,3 +16,20 @@ Dalam pengerjaan worksheet ini saya menggunakan Gemini AI:
 
 penulisan kode dan pelaksanaan pengujian dilakukan sendiri
 
+## Pertemuan 4 — Design token halaman profil
+
+- Berkas gaya yang akan dibuat: tokens.css, base.css, layout.css, komponen.css, tema.css
+- Warna utama: #C2410C (merah cabai), dipilih karena merepresentasikan citarasa pedas dan rempah masakan khas Gorontalo.
+
+### Token yang saya tetapkan
+
+| Token | Nilai | Untuk apa |
+| --- | --- | --- |
+| --color-primary | #C2410C | tombol, tautan, penanda |
+| --color-fg | #1C1917 | warna teks utama |
+| --color-bg | #FAFAFA | latar halaman |
+| --radius-md | 0.5rem | sudut tombol dan kartu |
+| --space-4 | 1rem | jarak standar antar elemen |
+
+Kriteria selesai saya: mengubah --color-primary di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
+
