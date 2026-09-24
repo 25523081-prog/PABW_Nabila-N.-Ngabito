@@ -1,0 +1,28 @@
+/* Merapikan Gambar */
+figure img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Merapikan Tombol */
+button {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+/* Merapikan Input Form */
+input {
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+input:focus {
+  outline: 2px solid var(--color-focus);
+}
