@@ -25,3 +25,6 @@
   --color-danger:  #FF8A8A;
   --color-focus:   #FFC000;
 }
+:root:has(#tema:checked) a {
+  color: var(--color-primary);
+}
