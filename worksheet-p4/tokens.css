@@ -31,6 +31,7 @@
   --color-primary: var(--chili-red);
   --color-danger: #991B1B;
   --color-focus: var(--corn-yellow);
+
   --card-pad: var(--space-4);
   --section-gap: var(--space-6);
 }
