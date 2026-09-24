@@ -1,9 +1,17 @@
-/* Merapikan Gambar */
+/* Merapikan & Mengecilkan Ukuran Gambar */
+figure {
+  margin: var(--space-4) 0;
+  text-align: center; /* Memposisikan foto di tengah */
+}
+
 figure img {
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-1);
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-width: 320px;   /* Silakan atur ukuran lebar (misal: 280px - 350px) */
+  height: auto;       /* Menjaga proporsi gambar agar tidak gepeng */
+  border-radius: var(--radius-md); /* Sudut membulat */
+  box-shadow: var(--shadow-1);     /* Bayangan halus */
+  display: block;
+  margin: 0 auto;     /* Memastikan gambar berada di tengah kartu/halaman */
 }
 
 /* Merapikan Tombol */
