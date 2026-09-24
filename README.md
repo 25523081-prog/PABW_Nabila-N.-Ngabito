@@ -33,3 +33,10 @@ penulisan kode dan pelaksanaan pengujian dilakukan sendiri
 
 Kriteria selesai saya: mengubah --color-primary di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
 
+## Catatan penggunaan AI
+1. saya menanyakan step by step apa saja yang harus saya kerjakan (karna saya kurang mengerti bahasanya)
+2. menanyakan warna yang cocok untuk web yang saya buat
+3. mencari penjelasan dari beberapa pertanyaan di bagian G
+4. menanyakan beberapa bahasa yang tidak di mengerti yang ada di worksheet
+5. sempat ada error dan saya bertanya apa yang salah
+
