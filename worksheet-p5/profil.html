@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <!--
   KERANGKA AWAL — Halaman Profil Saya
-  PABW 2026/2027 · Pertemuan 3
+  PABW 2026/2027 · Pertemuan 3 & 5
 -->
 <html lang="id">
 <head>
-
-      <!-- TODO B.1: tambahkan dua baris meta di bawah ini:
-       <meta charset="...">
-       <meta name="viewport" content="...">  -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resep & Menu Masakan Khas Gorontalo</title>
 
-   <!-- urutan ini yang benar: token -> dasar -> tata letak -> komponen -> tema -->
+  <!-- urutan ini yang benar: token -> dasar -> tata letak -> komponen -> tema -->
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="layout.css">
@@ -24,124 +20,116 @@
 </head>
 
 <body>
+  <!-- Pembungkus paling luar untuk Grid 3 Baris (Lembar B.1) -->
   <div class="page">
 
-     <!-- TODO C.1: buat <header> di sini.
-       Isinya: satu <h1> berisi judul halaman Anda.
-       Di dalamnya juga ada <nav> berisi 3 tautan ke bagian halaman. -->
+    <header>
+      <!-- Pengalih tema gelap -->
+      <input type="checkbox" id="tema" class="pengalih-tema">
+      <label for="tema" class="tombol-tema">Tema gelap</label>
 
+      <h1>Resep & Menu Masakan Khas Gorontalo</h1>
+      <nav aria-label="Navigasi utama" class="navbar">
+        <ul>
+          <li><a href="#Daftar-Resep">Daftar Resep</a></li>
+          <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
+          <li><a href="#Tambah-Resep">Tambah Resep</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-<!-- taruh di dalam <header>, sebelum judul -->
-<input type="checkbox" id="tema" class="pengalih-tema">
-<label for="tema" class="tombol-tema">Tema gelap</label>
-
-    <h1>Resep & Menu Masakan Khas Gorontalo</h1>
-    <nav aria-label="Navigasi utama">
-      <ul>
-        <li><a href="#Daftar-Resep">Daftar Resep</a></li>
-        <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
-        <li><a href="#Tambah-Resep">Tambah Resep</a></li>
-      </ul>
-    </nav>
-  </header>
-
-    <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
-       Di dalamnya ada 2 <section>, masing-masing punya <h2> sendiri. -->
-
-  <main class="isi"></main>
-    
-    <!-- TODO D.1: di dalam section pertama, buat tabel data Anda.
-         Wajib ada: <caption>, <thead>, <th scope="col">, dan minimal 3 baris data. -->
-
-    <section id="Daftar-Resep">
-      <h2>Daftar Masakan Favorit</h2>
+    <!-- Pembungkus isi utama (Lembar B.2) -->
+    <main class="isi"> 
       
-      <table>
-        <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
-        <thead>
-          <tr>
-            <th scope="col">Nama Masakan</th>
-            <th scope="col">Bahan Utama</th>
-            <th scope="col">Bumbu Pelengkap</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Binthe Biluhuta</th>
-            <td>Jagung, ikan atau udang, kelapa</td>
-            <td>Cabai, bawang merah, bawang putih, jeruk nipis, garam</td>
-          </tr>
-          <tr>
-            <th scope="row">Ayam Iloni</th>
-            <td>Ayam, santan</td>
-            <td>Cabai, bawang merah, bawang putih, kunyit, jahe, lengkuas</td>
-          </tr>
-          <tr>
-            <th scope="row">Bilenthango</th>
-            <td>Ikan mujair atau nila</td>
-            <td>Cabai, bawang merah, bawang putih, kunyit, jahe, tomat, garam</td>
-          </tr>
-          <tr>
-            <th scope="row">Sambal Sagela</th>
-            <td>Ikan sagela asap</td>
-            <td>Cabai, bawang merah, tomat, jeruk nipis, garam</td>
-          </tr>
-        </tbody>
-      </table>
-   
-  <figure>
-  <img src="binthe.jpg"
-       alt="Mangkuk berisi sup jagung Binte Biluhuta khas Gorontalo dengan taburan daun bawang dan sambal di atasnya"
-       width="300" 
-       height="320" 
-       loading="lazy">
-  <figcaption>Binthe Biluhuta</figcaption>
-</figure>
+      <section id="Daftar-Resep">
+        <h2>Daftar Masakan Favorit</h2>
+        
+        <table>
+          <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nama Masakan</th>
+              <th scope="col">Bahan Utama</th>
+              <th scope="col">Bumbu Pelengkap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Binthe Biluhuta</th>
+              <td>Jagung, ikan atau udang, kelapa</td>
+              <td>Cabai, bawang merah, bawang putih, jeruk nipis, garam</td>
+            </tr>
+            <tr>
+              <th scope="row">Ayam Iloni</th>
+              <td>Ayam, santan</td>
+              <td>Cabai, bawang merah, bawang putih, kunyit, jahe, lengkuas</td>
+            </tr>
+            <tr>
+              <th scope="row">Bilenthango</th>
+              <td>Ikan mujair atau nila</td>
+              <td>Cabai, bawang merah, bawang putih, kunyit, jahe, tomat, garam</td>
+            </tr>
+            <tr>
+              <th scope="row">Sambal Sagela</th>
+              <td>Ikan sagela asap</td>
+              <td>Cabai, bawang merah, tomat, jeruk nipis, garam</td>
+            </tr>
+          </tbody>
+        </table>
 
-  <figure>
-  <img src="ayam-iloni.jpg"
-       alt="Ayam Iloni — Ayam bakar khas Gorontalo yang dimasak dengan bumbu rempah dan santan gurih"
-       width="300" 
-       height="320" 
-       loading="lazy">
-  <figcaption>Ayam Iloni</figcaption>
-</figure>
-</figure>
-    </section>
+        <div class="galeri">
+          <figure class="sorotan">
+            <img src="binthe.jpg"
+                 alt="Mangkuk berisi sup jagung Binte Biluhuta khas Gorontalo dengan taburan daun bawang dan sambal di atasnya"
+                 width="300" 
+                 height="320" 
+                 loading="lazy">
+            <figcaption>Binthe Biluhuta</figcaption>
+          </figure>
 
-        <!-- TODO E.1: di dalam section kedua, buat form Anda.
-         Wajib ada: minimal 3 kolom, setiap kolom punya <label for> yang
-         cocok dengan id input-nya, dan satu atribut validasi. -->
+          <figure>
+            <img src="ayam-iloni.jpg"
+                 alt="Ayam Iloni — Ayam bakar khas Gorontalo yang dimasak dengan bumbu rempah dan santan gurih"
+                 width="300" 
+                 height="320" 
+                 loading="lazy">
+            <figcaption>Ayam Iloni</figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <section id="Tambah-Resep">
-      <h2>Form Tambah Resep</h2>
-      <!-- Nanti tambahkan <form> di sini -->
-        <form action="/simpan" method="post">
-            <p>
-            <label for="Nama-Menu">Nama Menu</label>
-            <input type="text" id="Nama-Menu" name="nama_menu" required>
-            </p>
+     <section id="Tambah-Resep">
+  <h2>Form Tambah Resep</h2>
+  <form action="/simpan" method="post">
+    
+    <div class="form-kolom">
+      <label for="Nama-Menu">Nama Menu</label>
+      <input type="text" id="Nama-Menu" name="nama_menu" required>
+      <span class="pesan-galat">Nama menu wajib diisi.</span>
+    </div>
 
-            <p>
-            <label for="Bahan-Utama">Bahan Utama</label>
-            <input type="text" id="Bahan-Utama" name="bahan_utama" required>
-            </p>
+    <div class="form-kolom">
+      <label for="Bahan-Utama">Bahan Utama</label>
+      <input type="text" id="Bahan-Utama" name="bahan_utama" required>
+      <span class="pesan-galat">Bahan utama wajib diisi.</span>
+    </div>
 
-            <p>
-            <label for="Bumbu-Pelengkap">Bumbu Pelengkap</label>
-            <input type="text" id="Bumbu-Pelengkap" name="bumbu_pelengkap" required>
-            </p>
-            <button type="submit">Simpan</button>           
-        </form>
-    </section>
-  </main>
+    <div class="form-kolom">
+      <label for="Bumbu-Pelengkap">Bumbu Pelengkap</label>
+      <input type="text" id="Bumbu-Pelengkap" name="bumbu_pelengkap" required>
+      <span class="pesan-galat">Bumbu pelengkap wajib diisi.</span>
+    </div>
 
-  <!-- TODO C.3: buat <footer> di sini -->
-  <footer>
-    <p>Nabila N. Ngabito, 25523081, 2026</p>
-  </footer>
+    <button type="submit">Simpan</button>          
+  </form>
+</section>
 
-  </div>
+    </main>
+
+    <footer>
+      <p>Nabila N. Ngabito, 25523081, 2026</p>
+    </footer>
+
+  </div> <!-- / .page -->
 </body>
 </html>

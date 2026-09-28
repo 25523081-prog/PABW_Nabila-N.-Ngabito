@@ -1,23 +1,29 @@
+/* ==========================================
+   KOMPONEN.CSS — Komponen & Elemen Spesifik
+   Worksheet P5 (Pertemuan 5)
+   ========================================== */
+
+/* Form & Input (Lembar B & E) */
 .form-kolom {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);          /* jarak label ke isian, seragam */
+  gap: var(--space-2); /* Jarak label ke isian */
 }
- 
+
 label {
   font-size: var(--text-sm);
   font-weight: 600;
 }
- 
+
 input, select, textarea {
-  font: inherit;                /* kolom isian ikut ukuran huruf halaman */
+  font: inherit;
   padding: var(--space-2) var(--space-3);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
   color: var(--color-fg);
 }
- 
+
 button {
   font: inherit;
   padding: var(--space-2) var(--space-4);
@@ -27,27 +33,30 @@ button {
   color: var(--color-surface);
   cursor: pointer;
 }
-/* :focus-visible hanya muncul saat pengguna memakai papan ketik */
+
+/* Aksesibilitas Fokus Papan Ketik */
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
- 
-/* JANGAN seperti ini — pengguna papan ketik kehilangan jejak */
-/* *:focus { outline: none; } */
-/* SALAH — form tampak merah padahal pengguna belum menyentuhnya */
-input:invalid { border-color: var(--color-danger); }
- 
-/* BENAR — hanya setelah pengguna mengetik sesuatu yang tidak sah */
+
+/* Validasi Form Sesuai Interaksi */
 input:user-invalid {
   border-color: var(--color-danger);
   border-width: 2px;
 }
- 
-/* Pesan galat: sembunyikan selama belum tidak-sah, tampilkan saat perlu */
-.pesan-galat       { display: none; color: var(--color-danger); font-size: var(--text-sm); }
-.form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
 
+.pesan-galat { 
+  display: none; 
+  color: var(--color-danger); 
+  font-size: var(--text-sm); 
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat { 
+  display: block; 
+}
+
+/* Lembar C: Galeri & Kartu Adaptif */
 .galeri {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -59,4 +68,30 @@ input:user-invalid {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
+}
+
+/* Lembar D: Penempatan Span */
+.sorotan { grid-column: span 2; }
+.papan    { grid-row: span 2; }
+
+/* Lembar E: Mencegah Kartu & Elemen Meluber */
+.galeri figure,
+.galeri .kartu {
+  display: grid;
+  align-content: start;
+  min-height: 14rem;
+}
+
+figure, table, input {
+  min-width: 0;
+}
+
+figcaption, th, td, h1, h2, h3 {
+  overflow-wrap: anywhere;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
