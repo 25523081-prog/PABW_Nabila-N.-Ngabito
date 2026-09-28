@@ -54,6 +54,12 @@ footer {
   align-items: center;
 }
 
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
 .isi {
   display: grid;
   grid-template-columns: 16rem 1fr;
