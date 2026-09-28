@@ -61,6 +61,7 @@ input:user-invalid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .kartu__kaki {
