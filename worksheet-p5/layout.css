@@ -1,12 +1,7 @@
-/* ==========================================
-   LAYOUT.CSS — Tata Letak Kerangka Utama
-   Worksheet P5 (Pertemuan 5)
-   ========================================== */
-
 /* B.1 Kerangka Utama Halaman (3 Baris Grid) */
 .page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   min-height: 100dvh;
 }
 
@@ -29,7 +24,7 @@ header {
   display: flex;
   gap: var(--space-4);
   align-items: center;
-}
+} 
 
 nav ul {
   display: flex;
@@ -38,18 +33,49 @@ nav ul {
   padding: 0;
 }
 
-/* B.2 Area Isi Utama (1 Kolom Penuh) */
 main,
 .isi {
-  display: grid;
-  grid-template-columns: 1fr; /* Memakai 1fr agar konten membentang penuh */
+  display: flex;
+  flex-direction: column;
   gap: var(--space-6);
-  padding-block: var(--space-6);
+  flex: 1; /* Mengisi sisa ruang secara alami */
+  padding-inline: var(--space-4);
+  padding-block: var(--space-4);
+}
+
+.sisi {
+  background: var(--color-surface);
+  padding: var(--card-pad);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  align-self: start;   /* sidebar tidak dipaksa setinggi konten */
+}
+
+.utama {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  min-width: 0;        /* penting! biar tidak meluber */
+}
+
+.galeri {
+  display: grid;  /* aktifkan mode grid */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+
+.kartu {
+  /* karena udah ada di galeri yang pakai grid */
+  background: var(--color-surface); 
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: var(--card-pad);
 }
 
 /* Footer */
 footer {
-  margin-top: var(--space-6);
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
   color: var(--color-fg);

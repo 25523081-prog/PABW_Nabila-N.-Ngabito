@@ -24,24 +24,39 @@
   <div class="page">
 
     <header>
+      <div class="header-baris">
+    <h1>Resep & Menu Masakan Khas Gorontalo</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#Daftar-Resep">Daftar Resep</a></li>
+        <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
+        <li><a href="#Tambah-Resep">Tambah Resep</a></li>
+      </ul>
+    </nav>
+    </aside>
       <!-- Pengalih tema gelap -->
       <input type="checkbox" id="tema" class="pengalih-tema">
       <label for="tema" class="tombol-tema">Tema gelap</label>
+      </div>
+    </header>
 
-      <h1>Resep & Menu Masakan Khas Gorontalo</h1>
-      <nav aria-label="Navigasi utama" class="navbar">
+    <main class="isi"> 
+      <!-- SIDEBAR KIRI -->
+      <aside class="sisi">
+        <h2>Menu</h2>
+        <nav>
         <ul>
-          <li><a href="#Daftar-Resep">Daftar Resep</a></li>
-          <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
+          <li><a href="#Daftar-Masakan-Favorit">Daftar Masakan Favorit</a></li>
+          <li><a href="#Gambar-Masakan-Favorit">Gambar Masakan Favorit</a></li>
           <li><a href="#Tambah-Resep">Tambah Resep</a></li>
         </ul>
       </nav>
-    </header>
+    </aside>
 
     <!-- Pembungkus isi utama (Lembar B.2) -->
-    <main class="isi"> 
-      
-      <section id="Daftar-Resep">
+    
+      <div class="utama">
+      <section id="Gambar-Masakan-Favorit">
         <h2>Daftar Masakan Favorit</h2>
         
         <table>
@@ -76,9 +91,14 @@
             </tr>
           </tbody>
         </table>
+        </div>
+        </div>
+      </section>
 
-        <div class="galeri">
-          <figure class="sorotan">
+      <section =id="Gambar-makanan">
+        <h2>Gambar Masakan Favorit</h2>
+        <div class="katalog">
+          <figure class="kartu">
             <img src="binthe.jpg"
                  alt="Mangkuk berisi sup jagung Binte Biluhuta khas Gorontalo dengan taburan daun bawang dan sambal di atasnya"
                  width="300" 
@@ -87,7 +107,7 @@
             <figcaption>Binthe Biluhuta</figcaption>
           </figure>
 
-          <figure>
+          <figure class="kartu">
             <img src="ayam-iloni.jpg"
                  alt="Ayam Iloni — Ayam bakar khas Gorontalo yang dimasak dengan bumbu rempah dan santan gurih"
                  width="300" 
@@ -123,10 +143,10 @@
     <button type="submit">Simpan</button>          
   </form>
 </section>
-
+</div>
     </main>
 
-    <footer>
+    <footer class="footer">
       <p>Nabila N. Ngabito, 25523081, 2026</p>
     </footer>
 
