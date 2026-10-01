@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+  Halaman ini adalah halaman profil untuk menampilkan informasi tentang resep dan menu masakan khas Gorontalo.
+  Dibuat oleh: Nabila N. Ngabito
+  NIM: 25523081
+  Tahun: 2026
+-->
+<html lang="id">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resep & Menu Masakan Khas Gorontalo</title>
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+
+</head>
+
+<body>
+  <!-- Pembungkus paling luar untuk Grid 3 Baris (Lembar B.1) -->
+  <div class="page">
+
+    <header>
+      <div class="header-baris">
+    <h1>Resep & Menu Masakan Khas Gorontalo</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#Daftar-Resep">Daftar Resep</a></li>
+        <li><a href="#Daftar-Bahan">Daftar Bahan</a></li>
+        <li><a href="#Tambah-Resep">Tambah Resep</a></li>
+      </ul>
+    </nav>
+
+      <!-- Pengalih tema gelap -->
+      <input type="checkbox" id="tema" class="pengalih-tema">
+      <label for="tema" class="tombol-tema">Tema gelap</label>
+      </div>
+    </header>
+
+    <main class="isi"> 
+      <!-- SIDEBAR KIRI -->
+      <aside class="sisi">
+        <h2>Menu</h2>
+        <nav>
+        <ul>
+          <li><a href="#Daftar-Masakan-Favorit">Daftar Masakan Favorit</a></li>
+          <li><a href="#Gambar-Masakan-Favorit">Gambar Masakan Favorit</a></li>
+          <li><a href="#Tambah-Resep">Tambah Resep</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Pembungkus isi utama (Lembar B.2) -->
+    
+      <div class="utama">
+      <section id="Gambar-Masakan-Favorit">
+        <h2>Daftar Masakan Favorit</h2>
+        
+        <table>
+          <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nama Masakan</th>
+              <th scope="col">Bahan Utama</th>
+              <th scope="col">Bumbu Pelengkap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Binthe Biluhuta</th>
+              <td>Jagung, ikan atau udang, kelapa</td>
+              <td>Cabai, bawang merah, bawang putih, jeruk nipis, garam</td>
+            </tr>
+            <tr>
+              <th scope="row">Ayam Iloni</th>
+              <td>Ayam, santan</td>
+              <td>Cabai, bawang merah, bawang putih, kunyit, jahe, lengkuas</td>
+            </tr>
+            <tr>
+              <th scope="row">Bilenthango</th>
+              <td>Ikan mujair atau nila</td>
+              <td>Cabai, bawang merah, bawang putih, kunyit, jahe, tomat, garam</td>
+            </tr>
+            <tr>
+              <th scope="row">Sambal Sagela</th>
+              <td>Ikan sagela asap</td>
+              <td>Cabai, bawang merah, tomat, jeruk nipis, garam</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="Gambar-makanan">
+        <h2>Gambar Masakan Favorit</h2>
+        <div class="galeri">
+          <figure class="kartu">
+            <img src="binthe.jpg"
+                 alt="Mangkuk berisi sup jagung Binte Biluhuta khas Gorontalo dengan taburan daun bawang dan sambal di atasnya"
+                 width="300" 
+                 height="320" 
+                 loading="lazy">
+            <figcaption>Binthe Biluhuta</figcaption>
+          </figure>
+
+          <figure class="kartu">
+            <img src="ayam-iloni.jpg"
+                 alt="Ayam Iloni — Ayam bakar khas Gorontalo yang dimasak dengan bumbu rempah dan santan gurih"
+                 width="300" 
+                 height="320" 
+                 loading="lazy">
+            <figcaption>Ayam Iloni</figcaption>
+          </figure>
+        </div>
+      </section>
+
+     <section id="Tambah-Resep">
+  <h2>Form Tambah Resep</h2>
+  <form action="/simpan" method="post">
+    
+    <div class="form-kolom">
+      <label for="Nama-Menu">Nama Menu</label>
+      <input type="text" id="Nama-Menu" name="nama_menu" required>
+      <span class="pesan-galat">Nama menu wajib diisi.</span>
+    </div>
+
+    <div class="form-kolom">
+      <label for="Bahan-Utama">Bahan Utama</label>
+      <input type="text" id="Bahan-Utama" name="bahan_utama" required>
+      <span class="pesan-galat">Bahan utama wajib diisi.</span>
+    </div>
+
+    <div class="form-kolom">
+      <label for="Bumbu-Pelengkap">Bumbu Pelengkap</label>
+      <input type="text" id="Bumbu-Pelengkap" name="bumbu_pelengkap" required>
+      <span class="pesan-galat">Bumbu pelengkap wajib diisi.</span>
+    </div>
+
+    <button type="submit">Simpan</button>          
+  </form>
+</section>
+</div>
+    </main>
+
+    <footer class="footer">
+      <p>Nabila N. Ngabito, 25523081, 2026</p>
+    </footer>
+
+  </div> <!-- / .page -->
+</body>
+</html>
