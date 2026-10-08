@@ -83,3 +83,9 @@ function hitungTotal(inputValue) {
 }
 console.log("Total:", hitungTotal("5"));    // 10
 console.log("Total:", hitungTotal("abc")); // 0 + pesan error
+
+window.profil = profil;
+window.daftarProyek = daftarProyek;
+window.jumlahMasakan = jumlahMasakan;
+window.buatPerkenalan = buatPerkenalan;
+window.formatKeahlian = formatKeahlian;
