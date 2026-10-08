@@ -40,3 +40,13 @@ Kriteria selesai saya: mengubah --color-primary di satu baris harus mengubah war
 4. menanyakan beberapa bahasa yang tidak di mengerti yang ada di worksheet
 5. sempat ada error dan saya bertanya apa yang salah
 
+an 8 — Halaman Profil yang Datanya Bergerak
+
+- **Dibantu AI:** struktur awal `app.js` dan contoh array methods.
+- **Dikerjakan sendiri:** pengisian data profil, data 4 masakan Gorontalo, pengujian Console, perbaikan galat, dan penyesuaian dengan HTML Pertemuan 6.
+
+Profil pribadi dengan tema **Masakan Khas Gorontalo** (4 masakan):
+1. Binthe Biluhuta
+2. Ayam Iloni
+3. Bilenthango
+4. Sambal Sagela
