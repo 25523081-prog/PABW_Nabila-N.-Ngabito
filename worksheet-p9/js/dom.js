@@ -43,6 +43,8 @@ barisFilter.addEventListener("click", (event) => {
   const tombol = event.target.closest("button");
   if (!tombol) return;
 
+
+
   const kategori = tombol.dataset.kategori;
   const terpilih = daftarProyek.filter(
     (proyek) =>
@@ -55,5 +57,48 @@ barisFilter.addEventListener("click", (event) => {
   tandaiTombolAktif(tombol);
 });
 
-// Render awal: semua proyek
+// --- LEMBAR D: Validasi Form ---
+const form = document.querySelector("#form-resep");
+const kolomNama = document.querySelector("#Nama-Menu");
+const kolomBahan = document.querySelector("#Bahan-Utama");
+const kolomBumbu = document.querySelector("#Bumbu-Pelengkap");
+
+const semuaKolom = [kolomNama, kolomBahan, kolomBumbu];
+
+function periksaKolom(kolom) {
+  const nilai = kolom.value.trim();
+  const sah = nilai !== "";
+  const pesan = kolom.parentElement.querySelector(".pesan-galat");
+  kolom.setAttribute("aria-invalid", !sah);
+  pesan.hidden = sah;
+  return sah;
+}
+
+function periksaSemua() {
+  let semuaSah = true;
+  semuaKolom.forEach((kolom) => {
+    if (!periksaKolom(kolom)) semuaSah = false;
+  });
+  return semuaSah;
+}
+
+function updateTombol() {
+  form.querySelector("button[type=submit]").disabled = !periksaSemua();
+}
+
+semuaKolom.forEach((kolom) => {
+  kolom.addEventListener("input", updateTombol);
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const semuaSah = periksaSemua();
+  if (!semuaSah) {
+    const kolomBermasalah = semuaKolom.find((k) => k.getAttribute("aria-invalid") === "true");
+    if (kolomBermasalah) kolomBermasalah.focus();
+    return;
+  }
+  console.log("Form valid! Data siap dikirim.");
+});
+
 render(daftarProyek);
