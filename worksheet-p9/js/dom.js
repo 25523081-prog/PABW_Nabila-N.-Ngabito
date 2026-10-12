@@ -1,3 +1,5 @@
+console.log("=== dom.js mulai ===");
+
 // js/dom.js
 const wadah = document.querySelector("#daftar");
 const barisFilter = document.querySelector("#filter");
@@ -102,3 +104,5 @@ form.addEventListener("submit", (event) => {
 });
 
 render(daftarProyek);
+
+console.log("=== dom.js selesai ===");
