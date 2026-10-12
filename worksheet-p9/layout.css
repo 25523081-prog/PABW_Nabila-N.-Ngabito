@@ -36,7 +36,7 @@ nav ul {
 main,
 .isi {
   display: grid;
-  grid-template-columns: 16rem 1fr;
+  grid-template-columns: 10rem 1fr;
   grid-template-areas:
     "sisi utama"
     "sisi bawah";

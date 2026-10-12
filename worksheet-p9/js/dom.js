@@ -89,7 +89,10 @@ function updateTombol() {
 }
 
 semuaKolom.forEach((kolom) => {
-  kolom.addEventListener("input", updateTombol);
+  kolom.addEventListener("input", () => {
+    periksaKolom(kolom);
+    updateTombol();
+  });
 });
 
 form.addEventListener("submit", (event) => {
