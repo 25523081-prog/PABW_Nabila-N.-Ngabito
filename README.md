@@ -50,3 +50,27 @@ Profil pribadi dengan tema **Masakan Khas Gorontalo** (4 masakan):
 2. Ayam Iloni
 3. Bilenthango
 4. Sambal Sagela
+
+# PABW — Worksheet Pertemuan 9
+
+**Nama:** Nabila N. Ngabito  
+**NIM:** 25523081  
+**Kelas:** (isi)  
+**Tanggal:** (isi)
+
+## Topik
+DOM, Event, dan Interaktivitas — Memasang Data ke Halaman
+
+## Isi Folder
+- `profil.html` — halaman resep masakan Gorontalo
+- `js/app.js` — data dan fungsi murni
+- `js/dom.js` — kode DOM & render
+- `*.css` — file CSS
+
+**Dibantu AI:** memahami konsep DOM, event delegation, debugging error.
+**Dikerjakan sendiri:** menulis HTML, memilih topik, mengetik & menyesuaikan kode, menguji di browser.
+
+## Bukti
+- Screenshot tabel muncul dari data
+- Screenshot Console bersih
+- Screenshot filter bekerja
