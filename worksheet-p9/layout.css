@@ -1,0 +1,79 @@
+/* B.1 Kerangka Utama Halaman (3 Baris Grid) */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+/* Header */
+header {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-baris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* B.2 Navigasi Atas / Navbar */
+.navbar {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+} 
+
+nav ul {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+
+main,
+.isi {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-areas:
+    "sisi utama"
+    "sisi bawah";
+}
+.sisi  { grid-area: sisi; }
+.utama { grid-area: utama; }
+
+
+.sidebar,
+.sisi {
+  background: var(--color-surface);
+  padding: var(--card-pad);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.sidebar nav ul,
+.sisi nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.konten-utama,
+.utama {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  min-width: 0;        /* penting! biar tidak meluber */
+}
+
+/* Footer */
+footer {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-fg);
+  font-size: var(--text-sm);
+}
