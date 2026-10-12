@@ -1,11 +1,9 @@
 console.log("=== dom.js mulai ===");
 
-// js/dom.js
 const wadah = document.querySelector("#daftar");
 const barisFilter = document.querySelector("#filter");
 const kosong = document.querySelector("#kosong");
 
-// Bikin satu baris tabel
 function buatBaris(proyek) {
   const tr = document.createElement("tr");
   const th = document.createElement("th");
@@ -22,7 +20,6 @@ function buatBaris(proyek) {
   return tr;
 }
 
-// Render — kosongin dulu, cek kosong, baru isi
 function render(daftar) {
   wadah.textContent = "";
   if (daftar.length === 0) {
@@ -33,14 +30,12 @@ function render(daftar) {
   daftar.forEach((proyek) => wadah.append(buatBaris(proyek)));
 }
 
-// Tandai tombol filter yang aktif
 function tandaiTombolAktif(tombolAktif) {
   document.querySelectorAll("#filter button").forEach((tombol) => {
     tombol.classList.toggle("aktif", tombol === tombolAktif);
   });
 }
 
-// Satu pendengar di induk (event delegation)
 barisFilter.addEventListener("click", (event) => {
   const tombol = event.target.closest("button");
   if (!tombol) return;
@@ -59,7 +54,6 @@ barisFilter.addEventListener("click", (event) => {
   tandaiTombolAktif(tombol);
 });
 
-// --- LEMBAR D: Validasi Form ---
 const form = document.querySelector("#form-resep");
 const kolomNama = document.querySelector("#Nama-Menu");
 const kolomBahan = document.querySelector("#Bahan-Utama");
