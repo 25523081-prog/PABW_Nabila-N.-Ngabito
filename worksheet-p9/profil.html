@@ -54,6 +54,12 @@
       <div class="utama">
       <section id="Gambar-Masakan-Favorit">
         <h2>Daftar Masakan Favorit</h2>
+
+         <div id="filter" class="baris-filter">
+          <button type="button" data-kategori="semua" class="aktif">Semua</button>
+          <button type="button" data-kategori="selesai">Selesai</button>
+          <button type="button" data-kategori="belum">Belum Selesai</button>
+        </div>
         
         <table>
           <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
@@ -65,9 +71,10 @@
             </tr>
           </thead>
           <tbody id="daftar">
-            
+
           </tbody>
         </table>
+        <p id="kosong" class="pesan-kosong" hidden>Tidak ada masakan yang cocok dengan filter.</p>
       </section>
 
       <section id="Gambar-makanan">

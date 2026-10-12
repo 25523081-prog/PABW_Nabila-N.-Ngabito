@@ -55,8 +55,8 @@ Profil pribadi dengan tema **Masakan Khas Gorontalo** (4 masakan):
 
 **Nama:** Nabila N. Ngabito  
 **NIM:** 25523081  
-**Kelas:** (isi)  
-**Tanggal:** (isi)
+**Kelas:** D  
+**Tanggal:** 12 Oktober 2026
 
 ## Topik
 DOM, Event, dan Interaktivitas — Memasang Data ke Halaman
