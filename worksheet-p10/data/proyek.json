@@ -1,14 +1,13 @@
 [
-    {
+  {
     "judul": "Binthe Biluhuta",
-    "bahanUtama": "Jagung, ikan/udang, kelapa", 
-    "bumbu": "Cabai, bawang, jeruk nipis", 
-    "kategori": "masakan", 
-    "tahun": 2026, 
+    "bahanUtama": "Jagung, ikan/udang, kelapa",
+    "bumbu": "Cabai, bawang, jeruk nipis",
+    "kategori": "masakan",
+    "tahun": 2026,
     "selesai": true
   },
   {
-   
     "judul": "Ayam Iloni",
     "bahanUtama": "Ayam, santan",
     "bumbu": "Cabai, kunyit, jahe",

@@ -1,3 +1,4 @@
+// js/dom.js
 console.log("=== dom.js mulai ===");
 
 const wadah = document.querySelector("#daftar");

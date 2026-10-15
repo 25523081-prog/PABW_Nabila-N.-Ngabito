@@ -12,13 +12,14 @@ const profil = {
 function buatPerkenalan({ nama, peran }) {
   return `${nama} — ${peran}`;
 }
+
 const formatKeahlian = (daftar) => daftar.join(" · ");
 
 console.log(profil.nama);
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
-// ===== P10: state & filter =====
+// ===== P10: state untuk filter =====
 let dataTerakhir = [];
 
 const barisFilter = document.querySelector("#filter");
