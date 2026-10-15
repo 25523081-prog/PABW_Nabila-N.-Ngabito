@@ -1,0 +1,40 @@
+[
+    {
+    "nama" : "Nabila N. Ngabito",
+    "peran": "Mahasiswa Informatika yang suka masak",
+    "keahlian": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+    "judul": "Binthe Biluhuta",
+    "bahanUtama": "Jagung, ikan/udang, kelapa", 
+    "bumbu": "Cabai, bawang, jeruk nipis", 
+    "kategori": "masakan", 
+    "tahun": 2026, 
+    "selesai": true
+  },
+  {
+   
+    "judul": "Ayam Iloni",
+    "bahanUtama": "Ayam, santan",
+    "bumbu": "Cabai, kunyit, jahe",
+    "kategori": "masakan",
+    "tahun": 2026,
+    "selesai": true
+  },
+  {
+    "judul": "Bilenthango",
+    "bahanUtama": "Ikan mujair atau nila",
+    "bumbu": "Cabai, kunyit, tomat",
+    "kategori": "masakan",
+    "tahun": 2026,
+    "selesai": false
+  },
+  {
+    "judul": "Sambal Sagela",
+    "bahanUtama": "Ikan sagela asap",
+    "bumbu": "Cabai, tomat, jeruk nipis",
+    "kategori": "masakan",
+    "tahun": 2026,
+    "selesai": true
+  }
+]

@@ -67,10 +67,9 @@ DOM, Event, dan Interaktivitas — Memasang Data ke Halaman
 - `js/dom.js` — kode DOM & render
 - `*.css` — file CSS
 
-**Dibantu AI:** memahami konsep DOM, event delegation, debugging error.
-**Dikerjakan sendiri:** menulis HTML, memilih topik, mengetik & menyesuaikan kode, menguji di browser.
+**Dibantu AI:** 
+1. memahami konsep dom.js, event delegation, debugging error.
+2. menjawab beberapa soal yang tidak di pahami yang ada di tiket keluar
+3. menanyakan jika ada kode yang error
 
-## Bukti
-- Screenshot tabel muncul dari data
-- Screenshot Console bersih
-- Screenshot filter bekerja
+**Dikerjakan sendiri:** menulis HTML, memilih topik, mengetik & menyesuaikan kode, menguji di browser.
