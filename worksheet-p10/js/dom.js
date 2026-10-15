@@ -1,9 +1,10 @@
 console.log("=== dom.js mulai ===");
 
 const wadah = document.querySelector("#daftar");
-const barisFilter = document.querySelector("#filter");
 const kosong = document.querySelector("#kosong");
+const pesanMuat = document.querySelector("#muat");
 
+// --- Untuk P9: tabel ---
 function buatBaris(proyek) {
   const tr = document.createElement("tr");
   const th = document.createElement("th");
@@ -20,9 +21,11 @@ function buatBaris(proyek) {
   return tr;
 }
 
-function render(daftar) {
+// --- Untuk P9 & P10: render ---
+export function render(daftar) {
   wadah.textContent = "";
   if (daftar.length === 0) {
+    kosong.textContent = "Belum ada data.";
     kosong.hidden = false;
     return;
   }
@@ -30,76 +33,18 @@ function render(daftar) {
   daftar.forEach((proyek) => wadah.append(buatBaris(proyek)));
 }
 
-function tandaiTombolAktif(tombolAktif) {
-  document.querySelectorAll("#filter button").forEach((tombol) => {
-    tombol.classList.toggle("aktif", tombol === tombolAktif);
-  });
+// --- Untuk P10: galat & memuat ---
+export function tampilkanGalat(pesan) {
+  wadah.textContent = "";
+  kosong.hidden = true;
+  const p = document.createElement("p");
+  p.className = "galat";
+  p.textContent = pesan;
+  wadah.append(p);
 }
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
-  if (!tombol) return;
-
-
-
-  const kategori = tombol.dataset.kategori;
-  const terpilih = daftarProyek.filter(
-    (proyek) =>
-      kategori === "semua" ||
-      (kategori === "selesai" && proyek.selesai) ||
-      (kategori === "belum" && !proyek.selesai)
-  );
-
-  render(terpilih);
-  tandaiTombolAktif(tombol);
-});
-
-const form = document.querySelector("#form-resep");
-const kolomNama = document.querySelector("#Nama-Menu");
-const kolomBahan = document.querySelector("#Bahan-Utama");
-const kolomBumbu = document.querySelector("#Bumbu-Pelengkap");
-
-const semuaKolom = [kolomNama, kolomBahan, kolomBumbu];
-
-function periksaKolom(kolom) {
-  const nilai = kolom.value.trim();
-  const sah = nilai !== "";
-  const pesan = kolom.parentElement.querySelector(".pesan-galat");
-  kolom.setAttribute("aria-invalid", !sah);
-  pesan.hidden = sah;
-  return sah;
+export function aturMemuat(aktif) {
+  if (pesanMuat) pesanMuat.hidden = !aktif;
 }
-
-function periksaSemua() {
-  let semuaSah = true;
-  semuaKolom.forEach((kolom) => {
-    if (!periksaKolom(kolom)) semuaSah = false;
-  });
-  return semuaSah;
-}
-
-function updateTombol() {
-  form.querySelector("button[type=submit]").disabled = !periksaSemua();
-}
-
-semuaKolom.forEach((kolom) => {
-  kolom.addEventListener("input", () => {
-    periksaKolom(kolom);
-    updateTombol();
-  });
-});
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const semuaSah = periksaSemua();
-  if (!semuaSah) {
-    const kolomBermasalah = semuaKolom.find((k) => k.getAttribute("aria-invalid") === "true");
-    if (kolomBermasalah) kolomBermasalah.focus();
-    return;
-  }
-  console.log("Form valid! Data siap dikirim.");
-});
-
-render(daftarProyek);
 
 console.log("=== dom.js selesai ===");

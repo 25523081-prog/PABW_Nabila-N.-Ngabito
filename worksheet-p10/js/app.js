@@ -1,11 +1,11 @@
-// LEMBAR B — DATA HALAMAN SEBAGAI VARIABEL
+import { ambilProyek } from './api.js';
 
+// LEMBAR B — DATA HALAMAN SEBAGAI VARIABEL
 const profil = {
   nama: "Nabila N. Ngabito",
   peran: "Mahasiswa Informatika yang suka masak",
   keahlian: ["HTML", "CSS", "JavaScript"],
 };
-
 const jumlahMasakan = 4;
 
 // Cek dengan console.log
@@ -18,12 +18,10 @@ const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.le
 console.log(kalimat);
 
 // LEMBAR C — DUA FUNGSI MURNI
-
 // Fungsi 1: kalimat perkenalan
 function buatPerkenalan({ nama, peran }) {
   return `${nama} — ${peran}`;
 }
-
 // Fungsi 2: format daftar keahlian jadi satu baris
 const formatKeahlian = (daftar) => daftar.join(" · ");
 
@@ -89,3 +87,14 @@ window.daftarProyek = daftarProyek;
 window.jumlahMasakan = jumlahMasakan;
 window.buatPerkenalan = buatPerkenalan;
 window.formatKeahlian = formatKeahlian;
+
+async function muat() {
+  try {
+    const data = await ambilProyek();
+    console.log('Data dari server:', data);
+  } catch (galat) {
+    console.error('Gagal:', galat.message);
+  }
+}
+
+muat(); // jalan otomatis saat halaman dibuka
