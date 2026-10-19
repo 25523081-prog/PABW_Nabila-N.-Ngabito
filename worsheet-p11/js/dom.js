@@ -5,8 +5,10 @@ const wadah = document.querySelector("#daftar");
 const kosong = document.querySelector("#kosong");
 const pesanMuat = document.querySelector("#muat");
 
-function buatBaris(proyek) {
+// 1. Tambahkan parameter (proyek, favorit)
+function buatBaris(proyek, favorit) {
   const tr = document.createElement("tr");
+  
   const th = document.createElement("th");
   th.setAttribute("scope", "row");
   th.textContent = proyek.judul;
@@ -17,7 +19,20 @@ function buatBaris(proyek) {
   const td2 = document.createElement("td");
   td2.textContent = proyek.bumbu;
 
-  tr.append(th, td1, td2);
+  // --- BAGIAN TOMBOL FAVORIT ---
+  const tdFavorit = document.createElement("td");
+  const tombol = document.createElement("button");
+  tombol.className = "favorit";
+  tombol.dataset.id = proyek.judul; // pakai judul sebagai ID unik
+  
+  // Cek apakah judul sudah ada di array favorit
+  tombol.textContent = favorit.includes(proyek.judul) ? "★" : "☆";
+  
+  tdFavorit.appendChild(tombol);
+  // -----------------------------
+
+  // Masukkan semuanya ke baris tabel
+  tr.append(th, td1, td2, tdFavorit);
   return tr;
 }
 
@@ -28,7 +43,7 @@ export function tandaiTombolAktif(kategoriAktif) {
   });
 }
 
-// render sekarang menerima state, BUKAN array mentah
+// render sekarang menerima state
 export function render(state) {
   wadah.textContent = "";
   
@@ -45,7 +60,9 @@ export function render(state) {
   }
   
   kosong.hidden = true;
-  tampil.forEach((proyek) => wadah.append(buatBaris(proyek)));
+  
+  // 2. Jangan lupa kirim state.favorit ke dalam buatBaris
+  tampil.forEach((proyek) => wadah.append(buatBaris(proyek, state.favorit)));
 }
 
 export function tampilkanGalat(pesan) {
@@ -60,3 +77,8 @@ export function tampilkanGalat(pesan) {
 export function aturMemuat(aktif) {
   if (pesanMuat) pesanMuat.hidden = !aktif;
 }
+
+
+
+
+
