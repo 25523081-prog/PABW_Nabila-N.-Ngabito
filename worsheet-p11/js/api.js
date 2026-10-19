@@ -11,7 +11,7 @@ export async function ambilProyek() {
     }
 
     const data = await respons.json();
-    return data;
+    return data.proyek || data;
   } catch (galat) {
     console.error('gagal memuat', galat.message);
     throw galat;
