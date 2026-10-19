@@ -1,11 +1,10 @@
 // js/dom.js
-console.log("=== dom.js mulai ===");
+import { saring } from './data.js';
 
 const wadah = document.querySelector("#daftar");
 const kosong = document.querySelector("#kosong");
 const pesanMuat = document.querySelector("#muat");
 
-// --- Untuk P9: tabel ---
 function buatBaris(proyek) {
   const tr = document.createElement("tr");
   const th = document.createElement("th");
@@ -22,19 +21,33 @@ function buatBaris(proyek) {
   return tr;
 }
 
-// --- Untuk P9 & P10: render ---
-export function render(daftar) {
+// Fungsi untuk menandai tombol filter yang sedang aktif
+export function tandaiTombolAktif(kategoriAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol.dataset.kategori === kategoriAktif);
+  });
+}
+
+// render sekarang menerima state, BUKAN array mentah
+export function render(state) {
   wadah.textContent = "";
-  if (daftar.length === 0) {
+  
+  // Panggil fungsi saring dari data.js
+  const tampil = saring(state.daftarProyek, state.kategoriAktif);
+
+  // Panggil penanda tombol aktif
+  tandaiTombolAktif(state.kategoriAktif);
+
+  if (tampil.length === 0) {
     kosong.textContent = "Belum ada data.";
     kosong.hidden = false;
     return;
   }
+  
   kosong.hidden = true;
-  daftar.forEach((proyek) => wadah.append(buatBaris(proyek)));
+  tampil.forEach((proyek) => wadah.append(buatBaris(proyek)));
 }
 
-// --- Untuk P10: galat & memuat ---
 export function tampilkanGalat(pesan) {
   wadah.textContent = "";
   kosong.hidden = true;
@@ -47,5 +60,3 @@ export function tampilkanGalat(pesan) {
 export function aturMemuat(aktif) {
   if (pesanMuat) pesanMuat.hidden = !aktif;
 }
-
-console.log("=== dom.js selesai ===");
