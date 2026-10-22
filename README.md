@@ -73,3 +73,10 @@ DOM, Event, dan Interaktivitas — Memasang Data ke Halaman
 3. menanyakan jika ada kode yang error
 
 **Dikerjakan sendiri:** menulis HTML, memilih topik, mengetik & menyesuaikan kode, menguji di browser.
+
+## Pertemuan 11
+- Versi Node.js: v22.23.2
+- Versi npm: (tulis angka npm yang muncul di terminal)
+
+### Deklarasi AI
+Saya menggunakan bantuan AI untuk memahami alur pemecahan 5 modul (Lembar B), membuat fungsi `saring` di `data.js`, dan menyelesaikan error sinkronisasi JSON serta error PowerShell saat mengecek npm. Bagian logika utama, pengujian di browser, dan pengisian worksheet saya kerjakan sendiri.
