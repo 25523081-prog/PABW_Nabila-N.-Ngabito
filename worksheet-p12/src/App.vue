@@ -1,12 +1,33 @@
 <script setup>
-// 1. Impor data profil dari data.js (pastikan di data.js ada export const profil)
+import { onMounted, watch } from 'vue'
+
+// Impor state dan fungsi dari state.js
+import { state, simpan, muat, pulihkan, isiProyek } from './state.js'
+// Impor fungsi fetch dari api.js
+import { ambilProyek } from './api.js'
+// Impor data profil dari data.js
 import { profil } from './data.js'
 
-// 2. Impor 4 komponen yang sudah kamu buat
+// Impor 4 komponen yang sudah kamu buat
 import KepalaProfil from './components/KepalaProfil.vue'
 import TombolFilter from './components/TombolFilter.vue'
 import DaftarProyek from './components/DaftarProyek.vue'
 import FormKontak from './components/FormKontak.vue'
+
+onMounted(async () => {
+  pulihkan(muat()) // Ambil pilihan terakhir dari localStorage
+  try {
+    isiProyek(await ambilProyek()) // Ambil data dari public/data/proyek.json
+  } catch (galat) {
+    state.galat = 'Data gagal dimuat. Periksa koneksi, lalu muat ulang.'
+  } finally {
+    state.memuat = false // Matikan loading
+  }
+})
+
+
+// Simpan ke localStorage setiap kali state berubah
+watch(state, (nilai) => simpan(nilai), { deep: true })
 </script>
 
 <template>

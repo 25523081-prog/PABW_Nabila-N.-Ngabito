@@ -1,7 +1,8 @@
-// js/data.js
+// src/data.js
 export const profil = {
-  nama: "Nabila N. Ngabito",
-  peran: "Mahasiswa Informatika yang suka masak",
+  // Bagian ini yang aku ubah agar judulnya benar
+  nama: "Resep & Menu Masakan Khas Gorontalo", 
+  peran: "Koleksi resep masakan khas Gorontalo",
   keahlian: ["HTML", "CSS", "JavaScript"],
 };
 

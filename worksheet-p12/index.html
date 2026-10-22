@@ -1,12 +1,63 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>worksheet-p12</title>
+    <title>Resep & Menu Masakan Khas Gorontalo</title>
+
+    <!-- KODE CSS KAMU DIMASUKKAN KE SINI -->
+    <style>
+      /* 1. Layout Utama (Grid) */
+      main.isi {
+        display: grid !important;
+        grid-template-columns: 14rem 1fr !important;
+        grid-template-areas:
+          "sisi utama"
+          "sisi bawah" !important;
+        align-items: start;
+        padding: 1rem;
+        gap: 1.5rem;
+        background-color: var(--color-bg);
+      }
+
+      /* 2. Sidebar (Menu Kiri) */
+      aside.sisi {
+        grid-area: sisi;
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--card-pad);
+        height: fit-content; 
+        position: sticky;
+        top: 1rem;
+      }
+
+      /* 3. Konten Utama */
+      div.utama {
+        grid-area: utama;
+        min-width: 0; 
+      }
+
+      /* 4. Form Tambah Resep */
+      form#form-resep {
+        max-width: 600px; 
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      /* 5. Tombol Atur Ulang */
+      button#atur-ulang {
+        width: auto !important; 
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem !important; 
+      }
+    </style>
   </head>
   <body>
+    <!-- INI BAGIAN PALING PENTING YANG TADI TERHAPUS -->
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

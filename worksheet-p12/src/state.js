@@ -1,17 +1,17 @@
-// js/state.js
-import { render } from './dom.js';
+// src/state.js
+import { reactive } from 'vue' 
 
 const KUNCI = "pabw-p11";
 const VERSI = 2;
 
-// 1. Objek state utama
-export const state = {
+export const state = reactive({
   daftarProyek: [],
   kategoriAktif: "semua",
   favorit: [],
-};
+  memuat: true, 
+  galat: '',    
+});
 
-// 2. Fungsi Simpan & Muat (Lembar D)
 export function simpan(state) {
   const isi = { 
     versi: VERSI,
@@ -24,25 +24,20 @@ export function simpan(state) {
 export function muat() {
   try {
     const isi = JSON.parse(localStorage.getItem(KUNCI));
-    
-    // Cek kunjungan pertama (kalau belum ada simpanan)
     if (!isi) return null; 
-    
-    // Cek versi skema (E.2)
     if (isi?.versi !== VERSI) {
-      localStorage.removeItem(KUNCI); // bentuk lama: buang
+      localStorage.removeItem(KUNCI); 
       return null;
     }
-    
     return isi;
   } catch {
-    localStorage.removeItem(KUNCI); // isi rusak: buang
+    localStorage.removeItem(KUNCI); 
     return null;
   }
 }
 
 export function pulihkan(isi) {
-  if (!isi) return; // kunjungan pertama: nilai bawaan tetap
+  if (!isi) return; 
   state.kategoriAktif = isi.kategoriAktif;
   state.favorit = isi.favorit;
 }
@@ -51,24 +46,18 @@ export function aturUlang() {
   localStorage.removeItem(KUNCI);
   state.kategoriAktif = 'semua';
   state.favorit = [];
-  render(state);
 }
 
-// 3. Fungsi Pengubah State (Lembar B & C)
+// 3. Fungsi Pengubah State
 export function isiProyek(daftar) {
   state.daftarProyek = daftar;
-  render(state);
 }
 
 export function pilihKategori(kategoriBaru) {
   state.kategoriAktif = kategoriBaru;
-  simpan(state); // Simpan setiap kali kategori berubah
-  render(state);
 }
 
 export function tambahFavorit(id) {
   if (state.favorit.includes(id)) return;
   state.favorit = [...state.favorit, id];
-  simpan(state); // Simpan setiap kali favorit berubah
-  render(state);
 }

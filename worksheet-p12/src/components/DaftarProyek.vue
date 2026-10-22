@@ -1,8 +1,31 @@
+<script setup>
+import { computed } from 'vue'
+import { state } from '../state.js'
+
+// Fungsi filter (menyesuaikan dengan data boolean "selesai" di JSON)
+const tampil = computed(() => {
+  if (state.kategoriAktif === 'semua') return state.daftarProyek;
+  if (state.kategoriAktif === 'selesai') {
+    return state.daftarProyek.filter(item => item.selesai === true);
+  }
+  if (state.kategoriAktif === 'belum') {
+    return state.daftarProyek.filter(item => item.selesai === false);
+  }
+  return state.daftarProyek;
+})
+</script>
+
 <template>
   <section id="Gambar-Masakan-Favorit">
     <h2>Daftar Masakan Favorit</h2>
-    
-    <table>
+
+    <!-- Menampilkan Kondisi -->
+    <p v-if="state.memuat">Memuat data...</p>
+    <p v-else-if="state.galat">{{ state.galat }}</p>
+    <p v-else-if="tampil.length === 0">Belum ada data.</p>
+
+    <!-- Tabel Data -->
+    <table v-else>
       <caption>Koleksi Resep Masakan Khas Gorontalo</caption>
       <thead>
         <tr>
@@ -13,10 +36,16 @@
         </tr>
       </thead>
       <tbody id="daftar">
-        <!-- Nanti di Lembar E kita isi pakai v-for -->
+        <!-- Looping data (menyesuaikan nama properti di JSON) -->
+        <tr v-for="(item, index) in tampil" :key="index">
+          <td>{{ item.judul }}</td>
+          <td>{{ item.bahanUtama }}</td>
+          <td>{{ item.bumbu }}</td>
+          <td>
+            <button @click="state.tambahFavorit(index)">★</button>
+          </td>
+        </tr>
       </tbody>
     </table>
-    <p id="kosong" class="pesan-kosong" hidden>Tidak ada masakan yang cocok dengan filter.</p>
-    <p id="muat" hidden>Memuat data...</p>
   </section>
 </template>
